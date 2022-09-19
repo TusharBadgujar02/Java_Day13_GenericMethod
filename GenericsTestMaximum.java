@@ -11,11 +11,38 @@ public static void main(String[] args) {
 	Float fNumFloat = 11.1F;
 	Float sNumFloat = 21.1F;
 	Float tNumFloat = 31.1F;
-	System.out.println("Maximum among three integer");
+	String fString = "Apple";
+	String sString = "Peach";
+	String tString = "Banana";
+	
+	System.out.println("***** Test Maximum among three ***** ");
 	GenericsTestMaximum m = new GenericsTestMaximum();
 	m.findMax(fNum, sNum, tNum);
 	m.findMax(fNumFloat, sNumFloat, tNumFloat);
+	m.findMax(fString, sString, tString);
+	
 }
+
+public void findMax(String fString, String sString, String tString) {
+	
+	String maxStr;
+	
+	if(fString.compareTo(sString) > 0 && fString.compareTo(tString) > 0 )
+	{
+		maxStr = fString;
+	}
+	
+	else if(sString.compareTo(fString) > 0 && sString.compareTo(tString) > 0 )
+	{
+		maxStr = sString;
+	}
+	
+	else 
+		{
+		maxStr = tString;
+		}
+	System.out.println("Maximum String is : " + maxStr + " among " + fString + ", " + sString + " and " + tString);
+	}
 
 public void findMax(Float fNumFloat, Float sNumFloat, Float tNumFloat) {
 
@@ -35,7 +62,7 @@ else
 	{
 		maxNum = tNumFloat;
 	}
-System.out.println("Maximum float is : " + maxNum + " among " + fNumFloat + ", " + sNumFloat + " and " + tNumFloat);
+System.out.println("Maximum Float is : " + maxNum + " among " + fNumFloat + ", " + sNumFloat + " and " + tNumFloat);
 }
 
 public void findMax(Integer fNum, Integer sNum, Integer tNum) {
@@ -56,6 +83,5 @@ else
 	{
 		maxNum = tNum;
 	}
-System.out.println("Maximum integer is : " + maxNum + " among " + fNum + ", " + sNum + " and " + tNum);
-}
-}
+System.out.println("Maximum Integer is : " + maxNum + " among " + fNum + ", " + sNum + " and " + tNum);
+}}
